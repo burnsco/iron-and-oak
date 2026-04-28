@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
 
 import teamImg from '../assets/images/about-team.jpg';
 import officeImg from '../assets/images/about-office.jpg';
@@ -62,7 +61,7 @@ const awards = [
     <div class="container">
       <div class="content-section">
         <div class="content-image">
-          <Image src={teamImg} alt="Iron & Oak construction team on site" width={800} height={600} format="webp" loading="lazy" />
+          <img src={teamImg.src} alt="Iron & Oak construction team on site" width={800} height={600} loading="lazy" />
         </div>
         <div class="content-text">
           <span class="label">Our Story</span>
@@ -86,7 +85,7 @@ const awards = [
           <p>We invest in our people, our processes, and our technology. Our BIM modeling, AI-driven scheduling, and proprietary quality assurance systems ensure that every project is delivered on time, on budget, and beyond expectations.</p>
         </div>
         <div class="content-image">
-          <Image src={officeImg} alt="Modern office workspace at Iron & Oak headquarters" width={800} height={600} format="webp" loading="lazy" />
+          <img src={officeImg.src} alt="Modern office workspace at Iron & Oak headquarters" width={800} height={600} loading="lazy" />
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
 
 import glassHouseImg from '../assets/images/project-glass-house.jpg';
 import apexPlazaImg from '../assets/images/project-apex-plaza.jpg';
@@ -109,12 +108,11 @@ const categories = ["All", ...new Set(projects.map(p => p.category))];
         {projects.map((project) => (
           <article class="project-card" data-category={project.category.toLowerCase()}>
             <div class="project-card-image">
-              <Image
-                src={project.image}
+              <img
+                src={project.image.src}
                 alt={`${project.title} — ${project.category} project in ${project.location}`}
                 width={600}
                 height={750}
-                format="webp"
                 loading="lazy"
               />
               <span class="project-card-badge">{project.category}</span>
